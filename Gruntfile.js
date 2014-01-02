@@ -18,14 +18,15 @@ module.exports = function(grunt) {
         uglify : {
             jsmin : {
                 src : 'dest/js/dojs.js',
-				//src : grunt.concat.dojs.dest;
-                dest : 'dest/js/dojs<%= grunt.template.today("yymmddHHMMss")%>.min.js'
+				dest : 'dest/js/dojs.min.js',
+				//dest : 'dest/js/dojs<%= grunt.template.today("yymmddHHMMss")%>.min.js'
             }
         },
 		cssmin : {
            cssmin : {
                 src : 'dest/css/docss.css',
-                dest : 'dest/css/docss<%= grunt.template.today("yymmddHHMMss")%>.min.css'
+                dest : 'dest/css/docss.min.css',
+				//dest : 'dest/css/docss<%= grunt.template.today("yymmddHHMMss")%>.min.css'
             }
         }
     });
