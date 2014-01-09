@@ -33,22 +33,22 @@ module.exports = function(grunt) {
 				dest : 'dest/css/docss<%= grunt.template.today("yymmddHHMMss")%>.min.css'
             }
         },
-		// imagemin: {
-  //           //压缩图片大小
-  //           dist: {
-  //               options: {
-  //                   optimizationLevel: 3 //定义 PNG 图片优化水平
-  //               },
-  //               files: [
-  //                      {
-  //                   expand: true,
-  //                   cwd: 'src/img/',
-  //                   src: ['**/*.{png,gif,jpg,JPG}'], // 优化 img 目录下所有 png/jpg/jpeg 图片
-  //                   dest: 'dest/img/' // 优化后的图片保存位置，覆盖旧图片，并且不作提示
-  //                   }
-  //                   ]
-  //               }
-  //           }
+		imagemin: {
+            //压缩图片大小
+            dist: {
+                options: {
+                    optimizationLevel: 3 //定义 PNG 图片优化水平
+                },
+                files: [
+                       {
+                    expand: true,
+                    cwd: 'src/img/',
+                    src: ['**/*.{png,gif,jpg,JPG}'], // 优化 img 目录下所有 png/jpg/jpeg 图片
+                    dest: 'dest/img/' // 优化后的图片保存位置，覆盖旧图片，并且不作提示
+                    }
+                    ]
+                }
+            }
     });
     // 载入concat和uglify插件，分别对于合并和压缩
     grunt.loadNpmTasks('grunt-contrib-concat');
